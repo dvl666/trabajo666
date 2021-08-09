@@ -20,3 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get("paises/get", [ConsolasController::class, "getPaises"]);
+
+Route::get("registros/get", [ConsolasController::class, "getRegistros"]);
+
+Route::post("registros/post", [ConsolasController::class,"crearRegistros"]);
+Route::post("registros/delete", [ConsolasController::class,"eliminarRegistro"]);
+

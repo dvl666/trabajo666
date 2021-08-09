@@ -1,19 +1,223 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Registro;
 use Illuminate\Http\Request;
 
 class ConsolasController extends Controller
 {
     public function getPaises(){
         $paises = array();
-        $paises[] = "pais1";
-        $paises[] = "pais2";
-        $paises[] = "pais3";
-        $paises[] = "pais4";
-        $paises[] = "pais5";
+        $paises[] = "Afganistan";
+        $paises[] = "Albania";
+        $paises[] = "Alemania";
+        $paises[] = "Andorra";
+        $paises[] = "Argelia";
+        $paises[] = "Argentina";
+        $paises[] = "Armenia";
+        $paises[] = "Australia";
+        $paises[] = "Austria";
+        $paises[] = "Azerbaiyán";
+        $paises[] = "Bahamas";
+        $paises[] = "Bangladés";
+        $paises[] = "Barbados";
+        $paises[] = "Baréin";
+        $paises[] = "Belice";
+        $paises[] = "Bielorrusia";
+        $paises[] = "Benín";
+        $paises[] = "Botsuana";
+        $paises[] = "Brasil";
+        $paises[] = "Brunei";
+        $paises[] = "Bulgaria";
+        $paises[] = "Burundi";
+        $paises[] = "Bután";
+        $paises[] = "Camboya";
+        $paises[] = "Camerún";
+        $paises[] = "Canadá";
+        $paises[] = "Catar";
+        $paises[] = "Chad";
+        $paises[] = "Chequia";
+        $paises[] = "Chile";
+        $paises[] = "China";
+        $paises[] = "Chipre";
+        $paises[] = "Colombia";
+        $paises[] = "Corea del Sur";
+        $paises[] = "Croacia";
+        $paises[] = "Cuba";
+        $paises[] = "Dinamarca";
+        $paises[] = "Dominica";
+        $paises[] = "República Dominicana";
+        $paises[] = "Ecuador";
+        $paises[] = "Egipto";
+        $paises[] = "El Salvador";
+        $paises[] = "Emiratos Árabes ";
+        $paises[] = "Estados Unidos";
+        $paises[] = "Estonia";
+        $paises[] = "Etiopía";
+        $paises[] = "España";
+        $paises[] = "Filipinas";
+        $paises[] = "Finlandia";
+        $paises[] = "Fiyi";
+        $paises[] = "Francia";
+        $paises[] = "Gabón";
+        $paises[] = "Gambia";
+        $paises[] = "Georgia";
+        $paises[] = "Ghana";
+        $paises[] = "Granada";
+        $paises[] = "Grecia";
+        $paises[] = "Guatemala";
+        $paises[] = "Guinea";
+        $paises[] = "Guinea-Bisáu";
+        $paises[] = "Guinea Ecuatorial";
+        $paises[] = "Guyana";
+        $paises[] = "Haití";
+        $paises[] = "Honduras";
+        $paises[] = "Hungría";
+        $paises[] = "India";
+        $paises[] = "Indonesia";
+        $paises[] = "Irak";
+        $paises[] = "Irán";
+        $paises[] = "Irlanda";
+        $paises[] = "Islandia";
+        $paises[] = "Israel";
+        $paises[] = "Italia";
+        $paises[] = "Jamaica";
+        $paises[] = "Japón";
+        $paises[] = "Jordania";
+        $paises[] = "Kazajistán";
+        $paises[] = "Kenia";
+        $paises[] = "Kirguistán";
+        $paises[] = "Kiribati";
+        $paises[] = "Kuwait";
+        $paises[] = "Laos";
+        $paises[] = "Lesoto";
+        $paises[] = "Letonia";
+        $paises[] = "Líbano";
+        $paises[] = "Liberia";
+        $paises[] = "Libia";
+        $paises[] = "Liechtenstein";
+        $paises[] = "Lituania";
+        $paises[] = "Luxemburgo";
+        $paises[] = "Macedonia del Norte ";
+        $paises[] = "Madagascar";
+        $paises[] = "Malasia";
+        $paises[] = "Malaui";
+        $paises[] = "Maldivas";
+        $paises[] = "Mali";
+        $paises[] = "Malta";
+        $paises[] = "Marruecos";
+        $paises[] = "Islas ";
+        $paises[] = "Marshall";
+        $paises[] = "Mauricio";
+        $paises[] = "Mauritania";
+        $paises[] = "México";
+        $paises[] = "Micronesia";
+        $paises[] = "Moldavia";
+        $paises[] = "Mónaco";
+        $paises[] = "Mongolia";
+        $paises[] = "Montenegro";
+        $paises[] = "Mozambique";
+        $paises[] = "Namibia";
+        $paises[] = "Nicaragua";
+        $paises[] = "Níger";
+        $paises[] = "Nigeria";
+        $paises[] = "Noruega";
+        $paises[] = "Nueva Zelanda";
+        $paises[] = "Omán";
+        $paises[] = "Países Bajos";
+        $paises[] = "Pakistán";
+        $paises[] = "Palaos";
+        $paises[] = "Palestina";
+        $paises[] = "Panamá";
+        $paises[] = "Papúa ";
+        $paises[] = "Nueva Guinea";
+        $paises[] = "Paraguay";
+        $paises[] = "Perú";
+        $paises[] = "Polonia";
+        $paises[] = "Portugal";
+        $paises[] = "Reino Unido";
+        $paises[] = "Ruanda";
+        $paises[] = "Rumania";
+        $paises[] = "Rusia";
+        $paises[] = "Islas Salomón";
+        $paises[] = "San Cristóbal y Nieves";
+        $paises[] = "San Marino";
+        $paises[] = "San Vicente y las Granadinas";
+        $paises[] = "Santa Lucía";
+        $paises[] = "Santo Tomé y Príncipe";
+        $paises[] = "Senegal";
+        $paises[] = "Serbia";
+        $paises[] = "Seychelles";
+        $paises[] = "Sierra Leona";
+        $paises[] = "Singapur";
+        $paises[] = "Siria";
+        $paises[] = "Somalia";
+        $paises[] = "Sri Lanka";
+        $paises[] = "Suazilandia ";
+        $paises[] = "Sudáfrica";
+        $paises[] = "Sudán";
+        $paises[] = "Sudán del Sur";
+        $paises[] = "Suecia";
+        $paises[] = "Suiza";
+        $paises[] = "Surinam";
+        $paises[] = "Tailandia";
+        $paises[] = "Tanzania";
+        $paises[] = "Tayikistán";
+        $paises[] = "Timor Oriental";
+        $paises[] = "Togo";
+        $paises[] = "Tonga";
+        $paises[] = "Trinidad y Tobago";
+        $paises[] = "Túnez";
+        $paises[] = "Turkmenistán";
+        $paises[] = "Turquía";
+        $paises[] = "Tuvalu";
+        $paises[] = "Ucrania";
+        $paises[] = "Uganda";
+        $paises[] = "Uruguay";
+        $paises[] = "Uzbekistán";
+        $paises[] = "Vanuatu";
+        $paises[] = "Ciudad del Vaticano";
+        $paises[] = "Venezuela";
+        $paises[] = "Vietnam";
+        $paises[] = "Yemen";
+        $paises[] = "Yibuti";
+        $paises[] = "Zambia";
+        $paises[] = "Zimbabue";
+
 
         return $paises;
     }
+
+    public function getRegistros(){
+        $registros = Registro::all();
+        return $registros;
+    }
+    /**public function crearRegistros(){
+        $registro = new Registro();
+        $registro->nombre = "gaspar";
+        $registro->numero = 999;
+        $registro->email = "9998";
+        $registro->pais = "pais5";
+        $registro->save();
+        return $registro;
+    }*/
+    public function crearRegistros(Request $request){
+        $input = $request->all();
+        $registro = new Registro();
+        $registro->nombre = $input["nombre"];
+        $registro->numero = $input["numero"];
+        $registro->email = $input["email"];
+        $registro->pais = $input["pais"];
+        $registro->save();
+        return  $registro;
+    }
+
+    public function eliminarRegistro(Request $request){
+        $input = $request->all();
+        $id = $input["id"];
+        $registro = Registro::findOrFail($id);
+        $registro->delete();
+        return "ok";
+    }
+
 }

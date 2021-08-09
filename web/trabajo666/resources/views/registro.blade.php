@@ -28,7 +28,7 @@
 
                 </div>
                 <div class="card-footer d-grid gap-1">
-                    <button class="btn btn-primary">Registrar</button>
+                    <button id="registrar-btn" class="btn btn-primary">Registrar</button>
                 </div>
             </div>
         </div>
@@ -36,5 +36,6 @@
     </div>
 @endsection
 @section('javascript')
+    <script src="{{asset('js/servicios/registrosService.js')}}"></script>
     <script src="{{asset('js/registro.js')}}"></script>
 @endsection

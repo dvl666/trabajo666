@@ -36,14 +36,14 @@ document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
     registro.pais = pais;
     var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
     var esValido= expReg.test(email);
-    if(esValido==true){
-        
+    if(esValido==true && Math.sign(numero)!=-1){
+
         let res = await crearRegistros(registro);
         await Swal.fire("Registro creado", "Registro creado exitosamente", "info");
         window.location.href = "tablaregistro";
         
     }
-    if(esValido==false){
+    if(esValido==false || Math.sign(numero)==-1){
         Swal.fire("Error", "Reingrese los datos de manera correcta", "error")
     }
     //let res = await crearRegistros(registro);
